@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeReport - Report Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="site-banner">
+    <h1>SafeReport</h1>
+    <p>"Dignified support for everyone, everywhere."</p>
+</div>
+<nav>
+    <ul>
+        <li><a href="index.html"> welcome page</a></li>
+        <li><a href="safereport_home.html">Home</a></li>
+        <li><a href="safereport_about.html">About</a></li>
+        <li><a href="safereport_reportform.html" class="active">Report Form</a></li>
+    </ul>
+</nav>
+<div class="page-wrapper">
+
+    <h1 class="form-title">Report Form</h1>
+    <p class="form-subtitle">Please fill in the form below. Your information is handled with full confidentiality.</p>
+
+    <form action="safereport_confirm.html" method="get">
+        <table class="report-table">
+
+            <tr>
+                <th><label for="full name">Full name</label></th>
+                <td><input type="text" placeholder="Enter your full name"></td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <input type="radio" name="gender" id="male">
+                    <label for="male">Male</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" name="gender" id="female">
+                    <label for="female">Female</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" name="gender" id="prefer_not">
+                    <label for="prefer_not">Prefer not to say</label>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Place of Residence</th>
+                <td><input type="text" placeholder="Enter your place of residence"></td>
+            </tr>
+
+            <tr>
+                <th>Category</th>
+                <td>
+                    <select>
+                        <option value="">-- Select a category --</option>
+                        <option>Health</option>
+                        <option>Legal Rights</option>
+                        <option>Financial Aid</option>
+                        <option>Violence</option>
+                        <option>Shelter</option>
+                        <option>Refugees</option>
+                        <option>Others</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>Email</th>
+                <td><input type="email" placeholder="Enter your email (optional)"></td>
+            </tr>
+
+            <tr>
+                <th>Phone Number</th>
+                <td><input type="tel" placeholder="Enter your phone number (optional)"></td>
+            </tr>
+
+            <tr>
+                <th>Location</th>
+                <td><input type="text" placeholder="Enter your current location"></td>
+            </tr>
+
+            <tr>
+                <th><label for="description">description</label></th>
+                <td><textarea id="description" name="description" ows="6" placeholder="Describe your situation in your own words..."></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="btn-row">
+                    <input type="submit" value="submit Report" class="btn-submit">
+                    <input type="reset" value="clear form" class="btn-reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</div>
+<div class="footer">
+    &copy; 2025 SafeReport &mdash; Dignified support for everyone, everywhere.
+</div>
+
+</body>
+</html>
