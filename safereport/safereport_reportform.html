@@ -3,6 +3,7 @@
 <head>
     <title>SafeReport - Report Form</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="safereport.js"></script>
 </head>
 <body>
     <div class="site-banner">
@@ -22,21 +23,32 @@
     <h1 class="form-title">Report Form</h1>
     <p class="form-subtitle">Please fill in the form below. Your information is handled with full confidentiality.</p>
 
-    <form action="safereport_confirm.html" method="get">
+    <form name="reportform" action="safereport_confirm.html" method="get" onsubmit="return validate_form(this)">
         <table class="report-table">
 
             <tr>
                 <th><label for="full name">Full name</label></th>
-                <td><input type="text" placeholder="Enter your full name"></td>
+               <td><input type="text" name="name" id="full name" placeholder="Enter your full name"></td>
             </tr>
+             <tr>
+        <th>Report Type</th>
+        <td>
+          <input type="radio" name="reportType" id="anonymous" value="anonymous" onclick="toggleName()" checked>
+          <label for="anonymous">Anonymous</label>
+          &nbsp;&nbsp;
+          <input type="radio" name="reportType" id="named" value="named" onclick="toggleName()">
+          <label for="named">Named</label>
+        </td>
+      </tr>
+
 
             <tr>
                 <th>Gender</th>
                 <td>
-                    <input type="radio" name="gender" id="male">
+                    <input type="radio" oncick="toggleName()" name="gender" id="male">
                     <label for="male">Male</label>
                     &nbsp;&nbsp;
-                    <input type="radio" name="gender" id="female">
+                    <input type="radio" oncick="toggleName()" name="gender" id="female">
                     <label for="female">Female</label>
                     &nbsp;&nbsp;
                     <input type="radio" name="gender" id="prefer_not">
@@ -46,44 +58,144 @@
 
             <tr>
                 <th>Place of Residence</th>
-                <td><input type="text" placeholder="Enter your place of residence"></td>
+                <td>
+                    <select name="residence" id="residence">
+                        <option value="">select your district</option>
+                        <optgroup label="Kigali city">
+                            <option value="Gasabo">Gasabo</option>
+                            <option value="kicukiro">Kicukiro</option>
+                            <option value="nyarugenge">Nyarugenge</option>
+                        </optgroup>
+                        <optgroup label="Northen province">
+                            <option value="Burera">Burera</option>
+                             <option value="Gakenke">Gakenke</option>
+                              <option value="Gicumbi">Gicumbi</option>
+                               <option value="Musanze">Musanze</option>
+                                <option value="Rulindo">Ruindo</option>
+                        </optgroup>
+                        <optgroup label="Southern province"></optgroup>
+                         <option value="gisagara">Gisagara</option>
+                          <option value="huye">Huye</option>
+                           <option value="kamonyi">Kamonyi</option>
+                            <option value="muhanga">Muhanga</option>
+                             <option value="nyamagabe">Nyamagabe</option>
+                              <option value="nyanza">Nyaruguru</option>
+                               <option value="Ruhango">Ruhango</option>
+                               </optgroup>
+                               <optgroup label="Eastern province"></optgroup>
+                         <option value=""Bugesera>Bugesera</option>
+                          <option value="Gatsibo">Gatsibo</option>
+                           <option value="Kayonza">Kayonza</option>
+                            <option value="Kirehe">Kirehe</option>
+                             <option value="Ngoma">Ngoma</option>
+                              <option value="Nyagatare">Nyagatare</option>
+                               <option value="Rwamagana">Rwamagana</option>
+                               </optgroup>
+                               <optgroup label=""></optgroup>
+                         <option value="Western province"></option>
+                          <option value="Karongi">Karongi</option>
+                           <option value="Ngororero">Ngororero</option>
+                            <option value="Nyabihu">Nyabihu</option>
+                             <option value="Nyamasheke">Nyamasheke</option>
+                              <option value="Rubavu">Rubavu</option>
+                               <option value="Rusizi">Rusizi</option>
+                               </optgroup>
+                    </select>
+                </td>
             </tr>
 
             <tr>
                 <th>Category</th>
                 <td>
-                    <select>
+                    <select name="category" id="category">
                         <option value="">-- Select a category --</option>
-                        <option>Health</option>
-                        <option>Legal Rights</option>
-                        <option>Financial Aid</option>
-                        <option>Violence</option>
-                        <option>Shelter</option>
-                        <option>Refugees</option>
-                        <option>Others</option>
+                        <option value="Health">Health</option>
+                        <option value="Legal Rights">Legal Rights</option>
+                        <option value="Financial Aid">Financial Aid</option>
+                        <option value="Violence">Violence</option>
+                        <option value="Shelter">Shelter</option>
+                        <option value="Refugees">Refugees</option>
+                        <option value="Abuse/Neglect">Abuse/Neglect</option>
+                        <option value="Child protection">Child protection</option>
+                        <option value="Gender based Violence">Gender based Violence</option>
+                        <option value="Human trafficking">Human trafficking</option>
+                        <option value="Discrimination">Discrimination</option>
+                        <option value="Mental health / Psychological support">Mental health / Psychological support</option>
+                        <option value="Disability">Disability</option>
+                        <option value="Educational access">Educational access</option>
+                        <option value="Employment">Employment</option>
+                        <option value="others">others</option>
                     </select>
                 </td>
             </tr>
 
             <tr>
                 <th>Email</th>
-                <td><input type="email" placeholder="Enter your email (optional)"></td>
+                <td><input type="email" name="email" id="email"placeholder="Enter your email (optional)"></td>
             </tr>
 
             <tr>
                 <th>Phone Number</th>
-                <td><input type="tel" placeholder="Enter your phone number (optional)"></td>
+                <td><input type="tel"  name="phone" placeholder="Enter your phone number (optional)"></td>
             </tr>
 
             <tr>
                 <th>Location</th>
-                <td><input type="text" placeholder="Enter your current location"></td>
+                <td><select name="location" id="location">
+                        <option value="">select your district</option>
+                        <optgroup label="Kigali city">
+                            <option value="Gasabo">Gasabo</option>
+                            <option value="kicukiro">Kicukiro</option>
+                            <option value="nyarugenge">Nyarugenge</option>
+                        </optgroup>
+                        <optgroup label="Northen province">
+                            <option value="Burera">Burera</option>
+                             <option value="Gakenke">Gakenke</option>
+                              <option value="Gicumbi">Gicumbi</option>
+                               <option value="Musanze">Musanze</option>
+                                <option value="Rulindo">Ruindo</option>
+                        </optgroup>
+                        <optgroup label="Southern pr2ovince"></optgroup>
+                         <option value="gisagara">Gisagara</option>
+                          <option value="huye">Huye</option>
+                           <option value="kamonyi">Kamonyi</option>
+                            <option value="muhanga">Muhanga</option>
+                             <option value="nyamagabe">Nyamagabe</option>
+                              <option value="nyanza">Nyaruguru</option>
+                               <option value="Ruhango">Ruhango</option>
+                               </optgroup>
+                               <optgroup label="Eastern province"></optgroup>
+                         <option value=""Bugesera>Bugesera</option>
+                          <option value="Gatsibo">Gatsibo</option>
+                           <option value="Kayonza">Kayonza</option>
+                            <option value="Kirehe">Kirehe</option>
+                             <option value="Ngoma">Ngoma</option>
+                              <option value="Nyagatare">Nyagatare</option>
+                               <option value="Rwamagana">Rwamagana</option>
+                               </optgroup>
+                               <optgroup label=""></optgroup>
+                         <option value="Western province"></option>
+                          <option value="Karongi">Karongi</option>
+                           <option value="Ngororero">Ngororero</option>
+                            <option value="Nyabihu">Nyabihu</option>
+                             <option value="Nyamasheke">Nyamasheke</option>
+                              <option value="Rubavu">Rubavu</option>
+                               <option value="Rusizi">Rusizi</option>
+                               </optgroup>
+                    </select>
+                </td>
             </tr>
 
             <tr>
                 <th><label for="description">description</label></th>
-                <td><textarea id="description" name="description" ows="6" placeholder="Describe your situation in your own words..."></textarea></td>
+                <td><textarea id="description" name="description" ows=2"6" placeholder="Describe your situation in your own words..."></textarea></td>
             </tr>
+             <div id="nameFieldGroup" style="display:none">
+      <label for="fullnameNamed">Note: since you chose "Named," your name above will be included in your report.</label>
+    </div>
+
+
+
             <tr>
                 <td colspan="2" class="btn-row">
                     <input type="submit" value="submit Report" class="btn-submit">
