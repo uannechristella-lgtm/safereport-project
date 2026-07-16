@@ -364,7 +364,7 @@ hr {
     border-top: 4px solid #1abc9c;
 }
 
-.footer a:link,
+.footer a:link2,
 .footer a:visited {
     color: #ffffff;
     text-decoration: underline;
