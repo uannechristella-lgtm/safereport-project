@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeReport - Admin</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/javascript.js"></script>
+</head>
+<body onload="checkAdminAccess()">
+
+    <div class="site-banner">
+        <h1>SafeReport Admin</h1>
+        <p>Internal report management</p>
+    </div>
+
+    <div class="page-wrapper">
+        <table class="report-table" id="reportsTable">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>District</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="reportsBody"></tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 SafeReport &mdash; Admin view
+    </div>
+
+</body>
+</html>

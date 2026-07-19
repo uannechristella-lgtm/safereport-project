@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeReport - Track Your Report</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/javascript.js"></script>
+</head>
+<body onload="loadLanguage()">
+
+    <div class="site-banner">
+        <h1>SafeReport</h1>
+        <p>"Dignified support for everyone, everywhere."</p>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" data-i18n="navWelcome"> welcome page</a></li>
+            <li><a href="home.html" data-i18n="navHome">Home</a></li>
+            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+            <li><a href="reportform.html" data-i18n="navReport">Report Form</a></li>
+            <li><a href="track.html" class="active" data-i18n="navTrack">Track</a></li>
+        </ul>
+    </nav>
+<div class="lang-switcher">
+
+    <a href="#" class="lang-link" onclick="setLanguage('en'); return false;">EN</a>
+
+    <a href="#" class="lang-link" onclick="setLanguage('rw'); return false;">RW</a>
+
+</div>
+    <div class="page-wrapper">
+        <h1 class="form-title">Track Your Report</h1>
+        <p class="form-subtitle">Enter the reference code you received when you submitted your report.</p>
+
+        <input type="text" id="trackCodeInput" placeholder="e.g. SR-2026-4821">
+        <button type="button" onclick="checkStatus()">Check Status</button>
+
+        <div id="trackResult" style="margin-top:20px;"></div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 SafeReport &mdash; Dignified support for everyone, everywhere.
+    </div>
+
+</body>
+</html>

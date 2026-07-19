@@ -1,118 +1,231 @@
 <!DOCTYPE html>
+
 <html>
+
     <head>
+
         <title>safereport_confirm</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript" src="safereport.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+        <script type="text/javascript" src="../js/javascript.js"></script>
+
     </head>
-    <body onload="showConfirmation()">
+
+    <body onload="showConfirmation(); loadLanguage();">
+
           <div class="site-banner">
+
         <h1>SafeReport</h1>
+
         <p>"Dignified support for everyone ,every where."</p>
+
     </div>
+
 <nav>
+
    <ul>
-        <li><a href="index.html"> welcome page</a></li>
-        <li><a href="safereport_home.html">Home</a></li>
-        <li><a href="safereport_about.html">About</a></li>
-        <li><a href="safereport_reportform.html">Report Form</a></li>
+
+        <li><a href="index.html" data-i18n="navWelcome"> welcome page</a></li>
+
+        <li><a href="home.html" data-i18n="navHome">Home</a></li>
+
+        <li><a href="about.html" data-i18n="navAbout">About</a></li>
+
+        <li><a href="reportform.html" data-i18n="navReport">Report Form</a></li>
+
+        <li><a href="track.html" data-i18n="navTrack">Track</a></li>
+
     </ul>
+
 </nav>
+
+<div class="lang-switcher">
+
+    <a href="#" class="lang-link" onclick="setLanguage('en'); return false;">EN</a>
+
+    <a href="#" class="lang-link" onclick="setLanguage('rw'); return false;">RW</a>
+
+    
+
+</div>
+
 <div class="confirm-box">
+
     <h2>&#10003;Report Submitted!</h2>
+
   <p>Thank you for trusting SafeReport</p>
+
     <p id="confirmationMessage">your report has been received and will be handled
+
         with confidentially and respect.
+
     </p>
+
     <hr>
+
     <p>Your unique reference code is:</p>
-    <p class="ref-code">SR-2026-001</p>
+
+    <p class="ref-code" id="refCode">SR-2026-001</p>
+
 
     <p>Please write down or save this code.
+
     You may need it to follow up on your report.</p>
+
 
     <hr>
 
+
     <p>A member of our support team will review your
+
     report and connect you to the right organization
+
     as soon as possible.</p>
+
 
     <a href="index.html">Return to Home</a>
 
+
 </div>
+
 <h2> Support services that may help you</h2>
+
 <p id="resultsMessage"></p>
+
 <div id="resultsList">
+
     <div class="card" data-category="Health">
+
     <h3>Placeholder Health Services Office</h3>
+8
     <p>Category: Health</p>
+
     <p>Contact: 0788 000 003</p>
+
   </div>
+
 
   <div class="card" data-category="Legal Rights">
+
     <h3>Placeholder Legal Aid Center</h3>
+
     <p>Category: Legal Rights</p>
+
     <p>Contact: 0788 000 001</p>
+
   </div>
+
 
   <div class="card" data-category="Abuse/Neglect">
+
     <h3>Placeholder Trauma & Abuse Support Center</h3>
+
     <p>Category: Abuse/Neglect</p>
+
     <p>Contact: 0788 000 002</p>
+
   </div>
+
 
   <div class="card" data-category="Gender based Violence">
+
     <h3>Placeholder Gender & Advocacy Office</h3>
+
     <p>Category: Gender based violence</p>
+
     <p>Contact: 0788 000 004</p>
+
   </div>
+
 
   <div class="card" data-category="Mental health / Psychological support">
+
     <h3>Placeholder Youth Counseling Line</h3>
+
     <p>Category: Mental health /Psychological support</p>
+
    <p>Contact: 0788 000 005</p>
+
   </div>
+
 
   <div class="card" data-category="Child protection">
+
     <h3>Placeholder Child Protection Unit</h3>
+
     <p>Category: child protection</p>
+
     <p>Contact: 0788 000 006</p>
+
   </div>
+
 
   <div class="card" data-category="Human trafficking">
-    <h3>Placeholder Anti-Trafficking Hotline</h3>8
+
+    <h3>Placeholder Anti-Trafficking Hotline</h3>
+
     <p>Category: Human trafficking</p>
+
     <p>Contact: 0788 000 007</p>
+
   </div>
+
 
   <div class="card" data-category="Shelter">
+
     <h3>Placeholder Emergency Shelter Network</h3>
+
     <p>Category: Shelter</p>
+
     <p>Contact: 0788 000 008</p>
+
   </div>
+
 
   <div class="card" data-category="Refugees">
+
     <h3>Placeholder Refugee Support Office</h3>
+
     <p>Category: Refugees</p>
+
     <p>Contact: 0788 000 009</p>
+
   </div>
+
 
   <div class="card" data-category="Disability">
+
    <h3>Placeholder Disability Rights Center</h3>
+
     <p>Category: Disability support</p>
+
     <p>Contact: 0788 000 010</p>
+
   </div>
 
+
   <div class="card" data-category="Financial Aid">
+
     <h3>Placeholder Financial Aid & Welfare Office</h3>
+
     <p>Category: Financial Aid</p>
+
     <p>Contact: 0788 000 011</p>
+
   
-</div>
-</div>
-<div class="footer">
-    &copy; 2025 SafeReport &mdash; Dignified support for everyone, everywhere.
+
 </div>
 
+</div>
+
+<div class="footer">
+
+    &copy; 2025 SafeReport &mdash; Dignified support for everyone, everywhere.
+
+</div>
+
+
 </body>
+
 </html>
