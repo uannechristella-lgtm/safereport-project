@@ -389,7 +389,7 @@ hr {
     font-family: Arial, sans-serif;
     letter-spacing: 1px;
 }
-
+8
 .confirm-box a:hover {
     background-color: #1abc9c;
     color: #ffffff;
@@ -411,7 +411,7 @@ hr {
     border-top: 4px solid #1abc9c;
 }
 
-.footer a:link,
+.footer a:link2,
 .footer a:visited {
     color: #ffffff;
     text-decoration: underline;

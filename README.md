@@ -9,7 +9,9 @@ Open the folders
 PROJECT STRUCTURE
 •	css
 •	media
+.java script
 •	safereport which includes
+.index.html
 •	Safereport_reportform.html
 •	Safereport_confirm.html
 •	safereport_home.html and other called safereport_about.html
